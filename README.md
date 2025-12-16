@@ -1,6 +1,7 @@
 # Readme
 
-
+Screenshot
+![screenshot](images/screenshot.png)
 
 ## Attribution
 Anglerfish by @rapidpunches
