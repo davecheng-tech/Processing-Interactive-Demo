@@ -33,7 +33,7 @@ public class Sketch extends PApplet {
         fishLeft = loadImage("images/fish-left.gif");
 
         fishX = width / 2;
-        fishY = height / 2;
+        fishY = height / 3 * 2;
         fishSpeed = 5;
 
         isMovingRight = true;
