@@ -43,9 +43,7 @@ public class Sketch extends PApplet {
     // Speed at which bubbles rise vertically
     private int bubbleSpeed = 3;
 
-    /**
-     * Default Java entry point for Processing Sketch
-     */
+    // Required entry point when running a Processing sketch as a Java application
     public static void main(String[] args) {
         PApplet.main("Sketch");
     }
