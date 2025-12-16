@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Launch Console Program",
+        "request": "launch",
+        "mainClass": "ConsoleProgram",
+        "args": "${fileBasenameNoExtension}"
+      },
+      {
+        "type": "java",
+        "name": "Launch Processing Sketch",
+        "request": "launch",
+        "mainClass": "Sketch"
+      }
+    ]
+  }
+  

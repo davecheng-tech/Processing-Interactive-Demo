@@ -1,0 +1,31 @@
+{
+  "java.import.generatesMetadataFilesAtProjectRoot": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.factorypath": true,
+    "**/.settings": true
+  },
+  "github.copilot.enable": false,
+  "github.copilot.chat.enable": false,
+  "java.project.importOnFirstTimeStartup": "automatic",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar"
+  ],
+  "update.mode": "none",
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "git.enableSmartCommit": true,
+  "git.smartCommitChanges": "all",
+  "git.suggestSmartCommit": false,
+  "git.confirmSync": false,
+  "git.inputValidation": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.editor.enablePreview": false
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ICS3U Base",
+  "image": "mcr.microsoft.com/devcontainers/java:18",
+  "settings": {
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "github.copilot.enable": false,
+    "github.copilot.chat.enable": false
+  },
+  "extensions": [
+    "vscjava.vscode-java-pack"
+  ]
+}
