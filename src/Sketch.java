@@ -1,33 +1,69 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 
-/**
- * Template for programs with Processing graphics output.
- * @author Your Name
- */
 public class Sketch extends PApplet {
+    PImage fishLeft;
+    PImage fishRight;
+
+    float fishX;
+    float fishY;
+    float fishSpeed;
+
+    boolean isMovingRight;
+
     public static void main(String[] args) {
         PApplet.main("Sketch");
     }
 
-    /** Set up canvas size. */
     @Override
     public void settings() {
-        size(600, 600);  // Canvas size
+        size(600, 600);
     }
 
-    /** Runes once at start. */
     @Override
     public void setup() {
-        background(120, 197, 227);  // Cyan background
+        fishRight = loadImage("images/fish-right.gif");
+        fishLeft = loadImage("images/fish-left.gif");
+
+        fishX = width / 2;
+        fishY = height / 2;
+        fishSpeed = 5;
+
+        isMovingRight = true;
+
+        imageMode(CENTER);
     }
 
-    /** Loops continuously after setup(). */
     @Override
     public void draw() {
-        fill(242, 19, 224);     // Magenta fill
-        circle(300, 300, 200);  // Draw a circle at the centre
+        background(0, 150, 255); // blue water
+
+        moveFish();
+        displayFish();
     }
 
-    /** Additional helper methods below (optional) */
+    public void moveFish() {
+        if (isMovingRight) {
+            fishX += fishSpeed;
 
+            if (fishX > width - fishRight.width / 2) {
+                isMovingRight = false;
+            }
+
+        } else {
+            fishX -= fishSpeed;
+
+            if (fishX < fishLeft.width / 2) {
+                isMovingRight = true;
+            }
+        }
+    }
+
+    public void displayFish() {
+        if (isMovingRight) {
+            image(fishRight, fishX, fishY);
+        } else {
+            image(fishLeft, fishX, fishY);
+        }
+    }
 }
