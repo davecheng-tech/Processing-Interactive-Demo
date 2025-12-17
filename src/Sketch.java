@@ -18,19 +18,19 @@ public class Sketch extends PApplet {
      * ===================== */
 
     // Fish images for each direction
-    private PImage fishLeft;
-    private PImage fishRight;
+    PImage fishLeft;
+    PImage fishRight;
 
     // Fish position and speed
-    private float fishX;
-    private float fishY;
-    private float fishSpeed;
+    float fishX;
+    float fishY;
+    float fishSpeed;
 
     // True if fish is currently moving to the right
-    private boolean isMovingRight;
+    boolean isMovingRight;
 
     // Enables or disables console debug output
-    private boolean debug = false;
+    boolean debug = true;
 
     /*
      * Stores all bubbles currently on screen.
@@ -38,10 +38,10 @@ public class Sketch extends PApplet {
      *   bubble[0] -> x position
      *   bubble[1] -> y position
      */
-    private ArrayList<int[]> bubbles;
+    ArrayList<int[]> bubbles;
 
     // Speed at which bubbles rise vertically
-    private int bubbleSpeed = 3;
+    int bubbleSpeed = 3;
 
     // Required entry point when running a Processing sketch as a Java application
     public static void main(String[] args) {
