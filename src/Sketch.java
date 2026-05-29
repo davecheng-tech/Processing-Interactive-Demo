@@ -106,6 +106,9 @@ public class Sketch extends PApplet {
         // Update and draw all bubbles
         updateBubbles();
         displayBubbles();
+
+        // Draw instructions on top of everything else
+        displayInstructions();
     }
 
     /**
@@ -146,6 +149,19 @@ public class Sketch extends PApplet {
         } else {
             image(fishLeft, fishX, fishY);
         }
+    }
+
+    /**
+     * displayInstructions()
+     *
+     * Draws a small instruction line at the top of the screen.
+     */
+    public void displayInstructions() {
+        fill(0);
+        noStroke();
+        textSize(13);
+        textAlign(CENTER);
+        text("Click to blow bubbles  |  D: toggle debug", width / 2, 20);
     }
 
     /**
@@ -213,6 +229,20 @@ public class Sketch extends PApplet {
 
         for (int[] bubble : bubbles) {
             ellipse(bubble[0], bubble[1], 10, 10);
+        }
+    }
+
+    /**
+     * keyPressed()
+     *
+     * Automatically called when a key is pressed.
+     * D toggles console debug output on or off.
+     */
+    @Override
+    public void keyPressed() {
+        if (key == 'd' || key == 'D') {
+            debug = !debug;
+            System.out.println("Debug mode: " + (debug ? "ON" : "OFF"));
         }
     }
 
