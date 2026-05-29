@@ -17,7 +17,7 @@ Processing-Interactive-Demo/
 ├── src/
 │   └── Sketch.java
 └── lib/
-    └── core-4.4.7.jar
+    └── core.jar
 ```
 
 Processing resolves image paths **relative to the project root**, not relative to `src/`. So the path `"images/fish-right.gif"` works correctly from within `Sketch.java`.
