@@ -12,15 +12,13 @@
 out/
 .idea/
 
-# VS Code: keep settings, ignore cache
-.vscode/*
-!.vscode/extensions.json
-!.vscode/launch.json
-!.vscode/settings.json
-
 # MacOS
 .DS_Store
 
+# Claude Code
+.claude/
+
 # Java build artifacts
-bin/
+bin/*
+!bin/.gitkeep
 target/
