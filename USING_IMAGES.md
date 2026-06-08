@@ -26,9 +26,18 @@ Processing resolves image paths **relative to the project root**, not relative t
 
 ---
 
-## Step 1: Declare a PImage Variable
+## Step 1: Import PImage and Declare a Variable
 
-`PImage` is Processing's image type. Declare it as an instance variable alongside your other fields, so it is accessible from any method.
+`PImage` is Processing's image type. Because this sketch runs in Java mode (not the Processing IDE), you must explicitly import `PImage` at the top of `Sketch.java` alongside the `PApplet` import:
+
+```java
+import processing.core.PApplet;
+import processing.core.PImage;
+```
+
+Without this import, the compiler will not recognize the `PImage` type and your sketch will fail to build.
+
+Then declare it as an instance variable alongside your other fields, so it is accessible from any method:
 
 ```java
 PImage fishRight;
